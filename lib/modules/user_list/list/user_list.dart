@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutterpersonlist/extensions/theme_extension.dart';
 import 'package:flutterpersonlist/generated/locale_keys.g.dart';
+import 'package:flutterpersonlist/modules/user_list/details/user_detail.dart';
 import 'package:flutterpersonlist/modules/user_list/list/user_list_view_model.dart';
 import 'package:flutterpersonlist/modules/user_list/model/user.dart';
 import 'package:mobx/mobx.dart';
@@ -127,11 +128,10 @@ class _UserListPageState extends State<UserListPage> {
                                 ),
                                 child: GestureDetector(
                                   onTap: () {
-                                    print('hello');
-                                    // Navigator.of(context).pushNamed(
-                                    //   BasketDetailsPage.route,
-                                    //   arguments: {'basketId': int.parse(item.id ?? ''), 'basketDetails': item},
-                                    // );
+                                    Navigator.of(context).pushNamed(
+                                      UserDetailPage.route,
+                                      arguments: {'userData': viewModel.list![index]},
+                                    );
                                   },
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,

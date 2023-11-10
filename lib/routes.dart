@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpersonlist/modules/spalsh/splash.dart';
+import 'package:flutterpersonlist/modules/user_list/details/user_detail.dart';
 import 'package:flutterpersonlist/modules/user_list/list/user_list.dart';
 import 'package:flutterpersonlist/modules/user_list/model/user.dart';
 
@@ -14,6 +15,14 @@ final Map<String, Widget Function(BuildContext)> appRoutes = {
     final data = args['list'] as UserListFromApi?;
     return UserList(
       list: data,
+    );
+  },
+
+  UserDetailPage.route: (context) {
+    final args = ModalRoute.of(context)!.settings.arguments as Map;
+    final data = args['data'] as UserListItem?;
+    return UserDetailPage(
+      userData: data,
     );
   }
 };

@@ -89,12 +89,80 @@ mixin _$UserListViewModel on _UserListViewModel, Store {
     });
   }
 
+  late final _$viewLastAtom =
+      Atom(name: '_UserListViewModel.viewLast', context: context);
+
+  @override
+  VoidCallback? get viewLast {
+    _$viewLastAtom.reportRead();
+    return super.viewLast;
+  }
+
+  @override
+  set viewLast(VoidCallback? value) {
+    _$viewLastAtom.reportWrite(value, super.viewLast, () {
+      super.viewLast = value;
+    });
+  }
+
+  late final _$scrollPositionAtom =
+      Atom(name: '_UserListViewModel.scrollPosition', context: context);
+
+  @override
+  double? get scrollPosition {
+    _$scrollPositionAtom.reportRead();
+    return super.scrollPosition;
+  }
+
+  @override
+  set scrollPosition(double? value) {
+    _$scrollPositionAtom.reportWrite(value, super.scrollPosition, () {
+      super.scrollPosition = value;
+    });
+  }
+
   late final _$loaddataAsyncAction =
       AsyncAction('_UserListViewModel.loaddata', context: context);
 
   @override
   Future loaddata() {
     return _$loaddataAsyncAction.run(() => super.loaddata());
+  }
+
+  late final _$_UserListViewModelActionController =
+      ActionController(name: '_UserListViewModel', context: context);
+
+  @override
+  dynamic setScrollPostion(double position) {
+    final _$actionInfo = _$_UserListViewModelActionController.startAction(
+        name: '_UserListViewModel.setScrollPostion');
+    try {
+      return super.setScrollPostion(position);
+    } finally {
+      _$_UserListViewModelActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic clearList() {
+    final _$actionInfo = _$_UserListViewModelActionController.startAction(
+        name: '_UserListViewModel.clearList');
+    try {
+      return super.clearList();
+    } finally {
+      _$_UserListViewModelActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic setNoMoreData() {
+    final _$actionInfo = _$_UserListViewModelActionController.startAction(
+        name: '_UserListViewModel.setNoMoreData');
+    try {
+      return super.setNoMoreData();
+    } finally {
+      _$_UserListViewModelActionController.endAction(_$actionInfo);
+    }
   }
 
   @override
@@ -104,7 +172,9 @@ data: ${data},
 list: ${list},
 noMoreData: ${noMoreData},
 isLoading: ${isLoading},
-pageNumber: ${pageNumber}
+pageNumber: ${pageNumber},
+viewLast: ${viewLast},
+scrollPosition: ${scrollPosition}
     ''';
   }
 }
