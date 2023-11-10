@@ -26,11 +26,13 @@
 ## Application Features:
 
 - Cross-Platform: Supports Android, iOS, and Web platforms.
-- Data Fetching: Retrieves data from the FakerAPI in sets of 20 persons with initial loading and infinite scrolling.
+- Data Fetching: Retrieves data from the FakerAPI in sets of 10 persons with initial loading and infinite scrolling.
 - User Interface: Utilizes Flutter's Material UI to display a list of persons with name, email, and image.
 - Pagination Handling: Implements custom pagination handling as the FakerAPI does not support it.
 - Dark Mode/Light Mode: Incorporates a dynamic theme that supports both dark and light modes.
 - page refresh handle for web and app (Android, iOS)
+
+Check out the live web build [here](https://stirring-tulumba-4c43f3.netlify.app/).
 
 ## Getting Started
 
