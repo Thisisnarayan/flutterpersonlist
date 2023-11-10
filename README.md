@@ -22,6 +22,7 @@
 - json_annotation: Serialization/deserialization of JSON data.
 - provider: State management for sharing data between widgets.
 
+
 ## Application Features:
 
 - Cross-Platform: Supports Android, iOS, and Web platforms.
@@ -29,6 +30,7 @@
 - User Interface: Utilizes Flutter's Material UI to display a list of persons with name, email, and image.
 - Pagination Handling: Implements custom pagination handling as the FakerAPI does not support it.
 - Dark Mode/Light Mode: Incorporates a dynamic theme that supports both dark and light modes.
+- page refresh handle for web and app (Android, iOS)
 
 ## Getting Started
 
