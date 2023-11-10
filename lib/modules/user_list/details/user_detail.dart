@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutterpersonlist/generated/locale_keys.g.dart';
 import 'package:flutterpersonlist/modules/user_list/details/user_detail_view_model.dart';
 import 'package:flutterpersonlist/modules/user_list/model/user.dart';
 import 'package:provider/provider.dart';
@@ -29,7 +31,7 @@ class _UserDetailScafflodState extends State<UserDetailScafflod> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('hi')),
+        appBar: AppBar(title: Text(LocaleKeys.userDetail.tr())),
         body: Observer(builder: (context) {
           return Padding(
             padding: const EdgeInsets.all(16.0),

@@ -130,7 +130,7 @@ class _UserListPageState extends State<UserListPage> {
                                   onTap: () {
                                     Navigator.of(context).pushNamed(
                                       UserDetailPage.route,
-                                      arguments: {'userData': viewModel.list![index]},
+                                      arguments: {'data': viewModel.list![index]},
                                     );
                                   },
                                   child: Row(

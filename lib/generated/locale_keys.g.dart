@@ -2,5 +2,6 @@
 
 abstract class  LocaleKeys {
   static const userListView = 'userListView';
+  static const userDetail = 'userDetail';
 
 }

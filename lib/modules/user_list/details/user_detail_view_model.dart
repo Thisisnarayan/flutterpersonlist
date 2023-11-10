@@ -5,7 +5,9 @@ part 'user_detail_view_model.g.dart';
 class UserDetailViewModel = _UserDetailViewModel with _$UserDetailViewModel;
 
 abstract class _UserDetailViewModel with Store {
-  _UserDetailViewModel({required this.userData});
+  _UserDetailViewModel({required this.userData}) {
+    print(this.userData);
+  }
 
   @observable
   UserListItem? userData;
