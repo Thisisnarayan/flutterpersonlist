@@ -1,0 +1,14 @@
+{
+  "Import extensions": {
+    "scope": "dart",
+    "prefix": "extensions",
+    "body": "import 'package:cherry/extensions/extensions.dart';",
+    "description": "import extensions"
+  },
+  "Import theme specific extensions": {
+    "scope": "dart",
+    "prefix": "theme extension",
+    "body": "import 'package:cherry/extensions/theme_extension.dart';",
+    "description": "theme colors, text styles, etc specific extensions"
+  }
+}
