@@ -4,6 +4,10 @@
 - Run `flutter pub run build_runner build --delete-conflicting-outputs` to generate required code.
 - Run `flutter pub run easy_localization:generate --source-dir assets/translations -f keys -o locale_keys.g.dart` to generate the localisation keys.
 
+
+### This Flutter project utilizes various packages and technologies to build a cross-platform application for both mobile (Android and iOS) and web platforms. The application fetches and displays data from the FakerAPI, showcasing a list of persons with details like name, email, and image. Key features and technologies used include:
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
